@@ -1,0 +1,11 @@
+CREATE TABLE my_lib(
+    lib_id INTEGER PRIMARY KEY,
+    lib2_id INTEGER,
+
+    FOREIGN KEY(lib2_id) REFERENCES my_lib2(lib2_id)
+);
+
+selectFromLibs:
+SELECT *
+FROM my_lib
+JOIN my_lib2;
